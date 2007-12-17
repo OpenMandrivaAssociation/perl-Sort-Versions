@@ -9,11 +9,9 @@ Summary:        A perl 5 module for sorting of revision-like numbers
 Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Sort/%{realname}-%{version}.tar.bz2
 Url:            http://www.cpan.org
 Prefix:         %{_prefix}
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  perl-devel
 Requires:       perl >= 5.002
 BuildArch:      noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description 
 Sort::Versions allows easy sorting of mixed non-numeric and
