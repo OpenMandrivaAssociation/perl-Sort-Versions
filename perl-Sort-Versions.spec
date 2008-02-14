@@ -5,6 +5,7 @@ License:        GPL or Artistic
 
 %define realname        Sort-Versions
 Group:          Development/Perl
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Summary:        A perl 5 module for sorting of revision-like numbers
 Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Sort/%{realname}-%{version}.tar.bz2
 Url:            http://www.cpan.org
