@@ -1,6 +1,6 @@
 Name:           perl-Sort-Versions
 Version:        1.5
-Release:        %mkrel 3
+Release:        %mkrel 5
 License:        GPL or Artistic
 
 %define realname        Sort-Versions
