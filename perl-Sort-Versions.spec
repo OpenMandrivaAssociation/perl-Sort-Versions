@@ -3,7 +3,7 @@
 Summary:	A perl 5 module for sorting of revision-like numbers
 Name:		perl-%{modname}
 Version:	1.5
-Release:	12
+Release:	13
 License:	GPLv2 or Artistic
 Group:		Development/Perl
 Url:		http://www.cpan.org
