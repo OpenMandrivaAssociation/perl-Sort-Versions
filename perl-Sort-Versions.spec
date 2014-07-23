@@ -21,7 +21,7 @@ intersperse variable-width numeric fields within text.
 Other applications can undoubtedly be found.
 
 %prep
-%setup -qn %{modname}-%{version}
+%setup -qn Sort-Versions-1.60
 
 %build
 CFLAGS="%{optflags}" echo | %{__perl} Makefile.PL INSTALLDIRS=vendor
