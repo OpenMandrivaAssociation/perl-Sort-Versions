@@ -2,12 +2,12 @@
 
 Summary:	A perl 5 module for sorting of revision-like numbers
 Name:		perl-%{modname}
-Version:	1.5
-Release:	18
+Version:	%perl_convert_version 1.60
+Release:	1
 License:	GPLv2 or Artistic
 Group:		Development/Perl
 Url:		http://www.cpan.org
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Sort/%{modname}-%{version}.tar.bz2
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Sort/%{modname}-1.60.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 
@@ -24,7 +24,7 @@ Other applications can undoubtedly be found.
 %setup -qn %{modname}-%{version}
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" echo | %{__perl} Makefile.PL INSTALLDIRS=vendor
+CFLAGS="%{optflags}" echo | %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
@@ -37,4 +37,3 @@ make test
 %doc README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-
