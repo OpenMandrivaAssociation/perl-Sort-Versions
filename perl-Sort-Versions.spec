@@ -1,15 +1,19 @@
-%define modname	Sort-Versions
+%define upstream_version 1.61
+%define upstream_name    Sort-Versions
 
-Summary:	A perl 5 module for sorting of revision-like numbers
-Name:		perl-%{modname}
-Version:	%perl_convert_version 1.60
-Release:	3
-License:	GPLv2 or Artistic
-Group:		Development/Perl
-Url:		http://www.cpan.org
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Sort/%{modname}-1.60.tar.gz
-BuildArch:	noarch
-BuildRequires:	perl-devel
+Name:           perl-Sort-Versions
+Version:        %perl_convert_version %{upstream_version}
+Release:        1
+License:        GPL or Artistic
+
+Group:          Development/Perl
+Summary:        A perl 5 module for sorting of revision-like numbers
+
+
+Source0:        ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Sort/%{upstream_name}-%{upstream_version}.tar.gz
+Url:            http://www.cpan.org
+BuildRequires:  perl-devel
+BuildArch:      noarch
 
 %description 
 Sort::Versions allows easy sorting of mixed non-numeric and
@@ -21,10 +25,10 @@ intersperse variable-width numeric fields within text.
 Other applications can undoubtedly be found.
 
 %prep
-%setup -qn Sort-Versions-1.60
+%setup -qn %{upstream_name}-%{upstream_version}
 
 %build
-CFLAGS="%{optflags}" echo | %{__perl} Makefile.PL INSTALLDIRS=vendor
+CFLAGS="%{optflags}" echo | perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
@@ -33,7 +37,9 @@ make test
 %install
 %makeinstall_std
 
+%clean
+
 %files
 %doc README
 %{perl_vendorlib}/*
-%{_mandir}/man3/*
+%{_mandir}/*/*
