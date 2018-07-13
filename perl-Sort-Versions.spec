@@ -12,6 +12,7 @@ Summary:        A perl 5 module for sorting of revision-like numbers
 
 Source0:        ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Sort/%{upstream_name}-%{upstream_version}.tar.gz
 Url:            http://www.cpan.org
+BuildRequires:  perl(Test::More)
 BuildRequires:  perl-devel
 BuildArch:      noarch
 
