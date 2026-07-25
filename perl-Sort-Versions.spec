@@ -1,17 +1,17 @@
-%define upstream_version 1.61
+%define upstream_version 1.62
 %define upstream_name    Sort-Versions
 
 Name:           perl-Sort-Versions
-Version:        %perl_convert_version %{upstream_version}
-Release:        4
+Version:        %{upstream_version}
+Release:        1
 License:        GPL or Artistic
 
 Group:          Development/Perl
 Summary:        A perl 5 module for sorting of revision-like numbers
 
 
-Source0:        ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Sort/%{upstream_name}-%{upstream_version}.tar.gz
-Url:            https://www.cpan.org
+Source0:        https://cpan.metacpan.org/authors/id/N/NE/NEILB/Sort-Versions-%{upstream_version}.tar.gz
+Url:            https://github.com/neilb/Sort-Versions
 BuildRequires:	make
 BuildRequires:  perl(Test::More)
 BuildRequires:  perl-devel
