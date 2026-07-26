@@ -1,16 +1,15 @@
-%define upstream_version 1.62
 %define upstream_name    Sort-Versions
 
 Name:           perl-Sort-Versions
-Version:        %{upstream_version}
-Release:        1
+Version:        1.62
+Release:        2
 License:        GPL or Artistic
 
 Group:          Development/Perl
 Summary:        A perl 5 module for sorting of revision-like numbers
 
 
-Source0:        https://cpan.metacpan.org/authors/id/N/NE/NEILB/Sort-Versions-%{upstream_version}.tar.gz
+Source0:        https://cpan.metacpan.org/authors/id/N/NE/NEILB/Sort-Versions-%{version}.tar.gz
 Url:            https://github.com/neilb/Sort-Versions
 BuildRequires:	make
 BuildRequires:  perl(Test::More)
@@ -27,7 +26,7 @@ intersperse variable-width numeric fields within text.
 Other applications can undoubtedly be found.
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version}
+%setup -qn %{upstream_name}-%{version}
 
 %build
 CFLAGS="%{optflags}" echo | perl Makefile.PL INSTALLDIRS=vendor
